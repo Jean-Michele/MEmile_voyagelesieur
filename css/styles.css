@@ -1,3 +1,208 @@
 /**-------------------------------------------
-                    BASE
+BASE
 -------------------------------------------**/
+
+    html{
+        box-sizing: border-box;
+    }
+
+    *,*:before,*:after{
+        box-sizing: inherit;
+    }
+
+/**-------------------------------------------
+ÉLÉMENTS
+-------------------------------------------**/
+
+    body{
+        margin: 0px;
+        padding: 0px;
+
+        font-family: "Roboto", serif;
+
+        font-size: 18px;
+    }
+
+    a{
+        text-decoration: none; /* enleve le underline */
+    }
+
+    .wrapper{
+        max-width: 1080px;
+        margin:0 auto
+    }
+
+/**-------------------------------------------
+Components
+-------------------------------------------**/
+
+
+/*  HEADER */
+
+    header{
+        background-color: #f26c25; /* couleur de bg*/
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    header .wrapper{
+        display: flex; /* basiquement, les deux a coter de l'autre */
+        justify-content: space-between; /* espace entre les deux sur tout le projet */
+        align-items: center; /* alignement sur l'axe x */
+    }
+
+    .logo{
+        display: flex; /* basiquement, les deux a coter de l'autre */
+        align-items: center; /* alignement sur l'axe x */
+        gap: 10px; /* gap entre lui et le truc a coter*/
+    }
+
+    header p{
+        font-size: 36px;
+        font-weight: bold;
+        color: white;
+    }
+
+    header ul{
+        display: flex;
+        gap: 40px; /* gap entre lui et le truc a coter*/
+        list-style-type: none; /* enleve le petit point */
+    }
+
+    header a{
+        color: white;
+    }
+
+    header nav a:hover{
+        text-decoration: underline; /* rajoute une barre en dessou si on hover */
+    }
+
+
+/*  SECTION BANIERE */
+
+    .banniere{
+        background-color: #eeeeee;
+    }
+
+    .banniere .wrapper{
+        height: 200px; /* donne une hauteur de base non-fixe */
+
+        display: flex; /* préparation pour le justify content */
+
+        justify-content: center; /* centrer sur l'axe Y (et pas l'axe Nazi) */
+
+        align-items: center; /* centrer sur l'axe X (et pas l'axe Nazi) */
+    }
+
+    h1{
+        font-size: 36px;
+        text-align: center;
+        font-weight: 300;
+        letter-spacing: 7.2px; /* espace entre les lettres */
+    }
+
+
+/*  SECTION TRANSPORT */
+
+    .titre-section{
+        display:flex; /* un a coter de l'autre */
+        justify-content: space-between;
+
+        /*probleme: le bouton ressemble a une olive */
+        align-items: center; /* afin de faire en sorte que le bouton reprenne sa taille normale en le mettant au milieu*/
+
+        height: 60px;
+        background-color: #eeeeee;
+
+        border: solid 1px #d0d0d0;
+        
+        margin-top: 80px;
+        margin-bottom: 60px;
+
+        padding-left: 20px; /* afin de faire en sorte que les objets ne sont pas collé a la barre de recherche */
+        padding-right: 20px; /* afin de faire en sorte que les objets ne sont pas collé a la barre de recherche */
+    }
+
+    h2{
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    div .conteneur-transport{
+        display: grid; /* afin de creer 3 grids pour les 3 forfaits */
+        grid-template-columns: 1fr 1fr 1fr; /* afin de creer 3 grids pour les 3 forfaits AVEC LA MEME PROPORTION */
+        gap: 60px; /* espace entre chaque forfaits */
+    } 
+    
+    h3{
+        font-size: 36px;
+        font-weight: 300;
+        text-align: center;
+
+        margin-bottom: 0;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    /*  FOOTER */
+    /* probleme: on ne peut pas voir les logos, on donne alors une width et un height au a car ils en on possede pas de base. Ensuite, nous mettons le display: inline-block afin de rendre ca beau ? */
+    footer a{
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+    }
+
+    footer ul{
+        display: flex;
+        gap: 20px;
+        list-style-type: none;
+    }
+
+    footer .wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer{
+        background-color: black;
+        margin-top: 80px;
+    }
+
+    h4{
+        color: white;
+    }
+
+    .facebook a{
+        background-image: url("../images/facebook-nb.png");
+    }
+
+    .twitter a{
+        background-image: url("../images/twitter-nb.png");
+    }
+
+    .linkedin a{
+        background-image: url("../images/linkedin-nb.png");
+    }
+
+    .pinterest a{
+        background-image: url("../images/pinterest-nb.png");
+    }
+
+    .facebook a:hover{
+        background-image: url("../images/facebook-survol.png");
+    }
+
+    .twitter a:hover{
+        background-image: url("../images/twitter-survol.png");
+    }
+
+    .linkedin a:hover{
+        background-image: url("../images/linkedin-survol.png");
+    }
+
+    .pinterest a:hover{
+        background-image: url("../images/pinterest-survol.png");
+    }

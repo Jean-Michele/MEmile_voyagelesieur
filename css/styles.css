@@ -128,7 +128,7 @@ Components
         font-weight: 700;
     }
 
-    div .conteneur-transport{
+    .conteneur-transport{
         display: grid; /* afin de creer 3 grids pour les 3 forfaits */
         grid-template-columns: 1fr 1fr 1fr; /* afin de creer 3 grids pour les 3 forfaits AVEC LA MEME PROPORTION */
         gap: 60px; /* espace entre chaque forfaits */

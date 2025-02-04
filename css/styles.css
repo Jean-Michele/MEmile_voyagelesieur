@@ -206,3 +206,9 @@ Components
     .pinterest a:hover{
         background-image: url("../images/pinterest-survol.png");
     }
+
+    .col-transport-invisible{
+        display: none;
+    }
+
+    
